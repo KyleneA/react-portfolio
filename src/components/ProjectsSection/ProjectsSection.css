@@ -1,0 +1,72 @@
+.projects {
+    text-align: center;
+
+    .title-area__projects {
+        background-color: var(--secondary);
+        border: 1px solid var(--secondary__btn);
+    }
+
+    .projects__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 10px;
+    }
+}
+
+.projects .projects-grid .projects-card {
+    height: 250px;
+    padding: 15px 0px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #C2DCED;
+    border-radius: 4px;
+    border: 1px solid #94C9ED;
+}
+
+.projects .projects-grid .projects-card:nth-of-type(1) {
+    background-image: url(https://github.com/KyleneA/Portfolio/blob/main/img/card-lingrow.png?raw=true);
+}
+
+.projects .projects-grid .projects-card:nth-of-type(2) {
+    background-image: url(https://github.com/KyleneA/Portfolio/blob/main/img/card-bakery.png?raw=true);
+}
+
+.projects .projects-grid .projects-card:nth-of-type(3) {
+    background-image: url(https://github.com/KyleneA/Portfolio/blob/main/img/card-flower.png?raw=true);
+}
+
+.projects .projects-grid .projects-card:nth-of-type(4) {
+    background-image: url(https://github.com/KyleneA/Portfolio/blob/main/img/card-mentorship.png?raw=true);
+}
+
+.projects .projects-grid .projects-card:nth-of-type(5) {
+    background-image: url("../img/web-project-1-manage-users.png");
+    background-size: cover;
+    background-position: top;
+    -webkit-transition: 0.3s background-position;
+    transition: 0.3s background-position;
+}
+
+.projects .projects-grid .projects-card:nth-of-type(5):hover {
+    background-position: center;
+}
+
+.projects .projects-grid .projects-card:nth-of-type(6) {
+    background-image: url(https://github.com/KyleneA/Portfolio/blob/main/img/Card-collage.jpg?raw=true);
+}
+
+@media (max-width: 768px) {
+    .projects .projects-grid {
+        -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .projects .projects-grid {
+        -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

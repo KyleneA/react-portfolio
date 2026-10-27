@@ -1,0 +1,21 @@
+.title-area {
+    --margin-bottom: 40px;
+
+    @media (max-width: 992px) {
+
+    }
+    
+    @media (max-width: 768px) {
+        
+    }
+
+    @media (max-width: 576px) {
+        --margin-bottom: 30px;
+    }
+
+    text-align: center;
+    margin-bottom: var(--margin-bottom);
+    border-radius: 12px 12px 0 0;
+    padding: 12px 24px;
+    box-shadow: -4px 4px 24px 0 rgba(27, 34, 40, 0.25);
+}

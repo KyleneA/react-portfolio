@@ -1,0 +1,49 @@
+.banner {
+    --padding-section: 150px 0;
+    --padding-card: 50px;
+    
+    @media (max-width: 992px) {
+        --padding-section: 100px 0;
+    }
+    
+    @media (max-width: 768px) {
+        --padding-section: 80px 0;
+        --padding-card: 30px;
+    }
+    
+    @media (max-width: 576px) {
+        --padding-section: 60px 0;
+    }
+    
+    height: fit-content;
+    min-height: calc(100vh - 60px);
+    padding: var(--padding-section);
+
+    background-image: url("../../assets/imgs/Banner-Hero-2.png");
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(213, 236, 231, 0.4);
+    background-blend-mode: overlay;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .banner-card {
+        width: 100%;
+        padding: var(--padding-card);
+        background-color: rgba(240, 146, 96, 0.95);
+        border-radius: var(--rounding--1);
+        box-shadow: var(--drop-shadow);
+
+        .banner-card__title-area {
+            h2 {
+                margin-bottom: var(--font-margin-bottom--3);
+            }
+        }
+        
+        .banner-card__text {
+            font-size: 18px;
+        }
+    }
+}

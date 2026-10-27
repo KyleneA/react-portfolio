@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&family=Sniglet:wght@400;800&display=swap');
+
+:root {
+    /* --COLOR PALETTE-- */
+    --primary: #f09260;
+    --primary--90: rgba(240, 146, 96, 0.9);
+    --primary__btn: #CA7A4F;
+    --primary__subtle: #f5d3c1;
+    --primary__light: #fdefe7;
+
+    --secondary: #94C9ED;
+    --secondary__btn: #6B93AE;
+    --secondary__subtle: #c1ddf0;
+    --secondary__light: #edf7f5;
+    
+    --tertiary: #8dccbd;
+    --tertiary__btn: #67978B;
+    --tertiary__subtle: #edf7f5;
+    --tertiary__light: #d5ece7;
+    --tertiary__light--40: rgba(213, 236, 231, 0.4);
+    
+    --text: #05141F;
+    --text__mid: #081F30;
+    --text__subtle: #0C304B;
+    --text__light: #f5fbff;
+
+    --bg: #fff9f5;
+
+    /* --FONTS-- */
+    /* Sizes */
+    --font-size--1: 54px;
+    --font-size--2: 36px;
+    --font-size--3: 24px;
+    --font-size--p-large: 16px;
+    --font-size--p-small: 14px;
+
+    /* Margin Bottom */
+    --font-margin-bottom--1: 50px;
+    --font-margin-bottom--2: 20px;
+    --font-margin-bottom--3: 15px;
+    --font-margin-bottom--4: 10px;
+
+    /* Headings */
+    --size__h1: var(--font-size--1);
+    --size__h2: var(--font-size--2);
+
+    /* --BORDER RADIUS-- */
+    --rounding--1: 8px;
+    --rounding__top--1: 8px 8px 0 0;
+    --rounding--circle: 50%;
+    --rounding--title: 12px 12px 0 0; /* probably move to component css */
+
+    /* --PADDING-- */
+    --padding__section: 100px 0;
+    --padding__section--banner: 190px 0 120;
+    --padding__title: 12px 24px;
+    --padding__card: 15px 25px;
+
+    /* --BOX-SHADOW-- */
+    --inner-shadow--1: inset 2px -4px 8px 0px rgba(27, 34, 40, 0.15);
+    --inner-shadow--2: inset -2px 2px 8px 0px rgba(245, 251, 255, 50%);
+    --drop-shadow: -4px 4px 24px 0 rgba(27, 34, 40, 0.25);
+    --card-shadow: 0 0 4px 0 rgba(69, 70, 71, 25%);
+
+    @media only screen and (max-width: 992px) {
+        /* --PADDING-- */
+        --padding__section: 150px 0;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        /* --PADDING-- */
+        --padding__section: 100px 0;
+        --padding__section--banner: 120px 0;
+    }
+    
+    @media only screen and (max-width: 576px) {
+        /* FONT */
+        --size__h1: var(--font-size--2);
+        --size__h2: var(--font-size--3);
+        
+        /* --PADDING-- */
+        --padding__section: 80px 0;
+        --padding__section--banner: 80px 0;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+main {
+    background: url("/src/assets/imgs/path2.png") repeat-y 55% -3%, #fff9f5;
+    background-size: 650px auto;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Sniglet", system-ui;
+    color: var(--text__heading);
+}
+
+h1 {
+    font-weight: 800;
+    font-size: var(--size__h1);
+    line-height: 0.9;
+    margin-bottom: var(--font-margin-bottom--2);
+    color: var(--text__mid);
+}
+
+h2 {
+    font-size: var(--size__h2);
+    text-transform: capitalize;
+    margin-bottom: 0;
+    color: var(--text__mid);
+}
+
+h3 {
+    font-size: var(--font-size--3);
+}
+
+p {
+    font-family: "National Park", sans-serif;
+    font-size: var(--font-size--p-large);
+    font-weight: 500;
+    margin-bottom: var(--font-margin-bottom--4);
+    color: var(--text);
+    text-wrap: pretty;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+section {
+    padding: var(--padding__section);
+    position: relative;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    color: #161717;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #dadce1;
+    text-decoration: underline;
+    -webkit-box-shadow: 0 0 2px rgba(69, 70, 71, 0.25);
+    box-shadow: 0 0 2px rgba(69, 70, 71, 0.25);
+}
